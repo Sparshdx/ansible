@@ -1,0 +1,13 @@
+---
+  - name: AWS provision instance
+    hosts: localhost
+    tasks:
+      - name: AWS provision instance
+        ec2:
+          key_name: AWS-Ansible
+          region: us-east-1
+          instance_type: t2.micro
+          image: ami-0080e4c5bc078760e
+          group: default
+          instance_tags:
+            Name: AWS-Ansible
